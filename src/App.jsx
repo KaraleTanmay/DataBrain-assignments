@@ -3,6 +3,7 @@ import BasicInfo from './components/BasicInfo'
 import AddressInfo from './components/AddressInfo';
 import BankInfo from './components/BankInfo';
 import AllInfo from './components/AllInfo';
+import './index.css';
 
 export default function App() {
 
@@ -39,12 +40,15 @@ export default function App() {
     ]
 
     return (
-        <div className='w-screen h-screen flex flex-col items-center justify-center overflow-y-scroll m-auto'>
-            <div className="p-4 md:p-6 border-[1px] rounded-lg border-slate-300 m-auto w-[90%] md:w-[40%] bg-white">
+        <div className={`w-screen h-[100vh] flex flex-col items-center justify-center ${!view ? "md:my-12" : ""} `}>
+            <div className="p-4 md:p-6 border-[1px] rounded-lg border-slate-300 m-auto w-[90%] md:w-[40%] bg-white ">
+
+
 
                 {
                     view ? forms[step] : <AllInfo data={{ ...basicInfo, ...addressInfo, ...paymentInfo }} setView={setView} />
                 }
+
 
             </div>
 

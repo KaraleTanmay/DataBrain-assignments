@@ -29,7 +29,7 @@ export default function AllInfo(props) {
     ];
 
     return (
-        <div className='w-full flex flex-col overflow-x-hidden gap-y-2'>
+        <div className='w-full flex flex-col gap-y-2 '>
             <div className='w-full text-center text-[30px] font-bold text-purple-600'>
                 Your Information
             </div>
